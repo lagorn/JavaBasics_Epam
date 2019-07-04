@@ -1,4 +1,4 @@
-package Warmup1_in1020;
+package Warmup1;
 
 public class in1020 {
     public boolean in1020(int a, int b) {
