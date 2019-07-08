@@ -5,26 +5,13 @@ public class stringMatch {
         int arrayLength1 = a.length();
         int arrayLength2 = b.length();
         int firstElement1 = 0;
-        int firstElement2 = 1;
+        int numberCoinidences = 0;
 
-        if(a.length() > b.length()){
-            if (arrayLength1 % 2 == 0) {
-                for (int i = 0; i <= arrayLength1; i++) {
-                    
-                }
-            }
-
-
-        }
-        else if (a.length() < b.length()){
-            if (arrayLength2 % 2 == 0) {
-                return 4;
+        for (int i = 0; i < arrayLength1; i++) {
+            if(a.regionMatches(true,firstElement1,b,firstElement1,2 ));{
+                numberCoinidences++;
             }
         }
-        else {
-
-        }
-
-        return 4;
+        return numberCoinidences;
     }
 }
