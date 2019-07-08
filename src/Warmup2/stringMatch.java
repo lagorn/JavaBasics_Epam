@@ -8,19 +8,56 @@ public class stringMatch {
         int firstElement2 = 1;
         int numberCoinidences = 0;
 
-        for (int i = 0; i < arrayLength1; i++) {
-            if(a.charAt(firstElement1) == b.charAt(firstElement1)){
-                if(a.charAt(firstElement2) == b.charAt(firstElement2)){
+        if((arrayLength1==0)||(arrayLength2==0)){
+            return numberCoinidences;
+        }
+
+        if(arrayLength1>arrayLength2){
+            for (int i = 0; i < arrayLength1 -1; i++) {
+                if(a.charAt(firstElement1) == b.charAt(firstElement1)){
+                    if(a.charAt(firstElement2) == b.charAt(firstElement2)){
+                        firstElement1++;
+                        firstElement2++;
+                        numberCoinidences++;
+                    }
+                }
+                else{
                     firstElement1++;
                     firstElement2++;
-                    numberCoinidences++;
                 }
             }
-            else{
-                firstElement1++;
-                firstElement2++;
-            }
+            return numberCoinidences;
         }
-        return numberCoinidences;
+        else if(arrayLength1<arrayLength2) {
+            for (int i = 0; i < arrayLength2 -1; i++) {
+                if (a.charAt(firstElement1) == b.charAt(firstElement1)) {
+                    if (a.charAt(firstElement2) == b.charAt(firstElement2)) {
+                        firstElement1++;
+                        firstElement2++;
+                        numberCoinidences++;
+                    }
+                } else {
+                    firstElement1++;
+                    firstElement2++;
+                }
+            }
+            return numberCoinidences;
+        }
+        else {
+            for (int i = 0; i < arrayLength1; i++) {
+                if(a.charAt(firstElement1) == b.charAt(firstElement1)){
+                    if(a.charAt(firstElement2) == b.charAt(firstElement2)){
+                        firstElement1++;
+                        firstElement2++;
+                        numberCoinidences++;
+                    }
+                }
+                else{
+                    firstElement1++;
+                    firstElement2++;
+                }
+            }
+            return numberCoinidences;
+        }
     }
 }

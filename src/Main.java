@@ -7,7 +7,7 @@ public class Main {
        obg.in1020(5,20);
 
        stringMatch odg = new stringMatch();
-       System.out.println(odg.stringMatch("adcd","adcf"));
+       System.out.println(odg.stringMatch("he","hello"));
 
     }
 }
