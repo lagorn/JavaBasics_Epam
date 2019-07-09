@@ -117,4 +117,12 @@ public class stringMatch {
             return numberCoinidences;
         }
     }
+    public int stringMatch3(String a, String b) { // Это тот метод который работает! Остальные только на половину)
+        int count = 0;
+
+        for (int i = 0; i < Math.min(a.length(), b.length()) - 1; i++)
+            if (a.substring(i, i+2).equals(b.substring(i, i+2)))
+                count++;
+        return count;
+    }
 }
